@@ -1,0 +1,3 @@
+Name : Chaka Mofokeng
+Email : 2013046483@ufs4life.ac.za
+Honours project : Machine Learning in Multi-Wavelength Galaxy/AGN evolution.

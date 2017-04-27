@@ -9,16 +9,11 @@ Created on Thu Apr 27 14:38:58 2017
 import numpy as np
 
 n_datapoint = [10, 30, 100, 300, 1000]
-err = []
-even = []
-odd = []
+
 for i in n_datapoint:
     x = np.linspace(0.0, np.pi/2, i)
-    for n in range(len(x)):
-     if x[n]%2 == 0 and n > 0 and n < len(x):
-         even.append(x[n])
-     elif n > 0 and n < len(x):
-         odd.append(x[n])
+    even = x[1::2]
+    odd = np.delete(x, even)
     y1 = np.cos(even)
     y_even=y1.sum()
     y2 = np.cos(odd)

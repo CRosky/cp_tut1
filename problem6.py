@@ -55,4 +55,4 @@ plt.ylabel('errors')
 plt.legend()
 plt.draw()
 #let's write the figure to disk
-plt.savefig('logplot_example')
+plt.savefig('logplot')

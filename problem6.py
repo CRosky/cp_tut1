@@ -23,15 +23,10 @@ for i in n_datapoint:
     
 
 err = []
-even = []
-odd = []
 for i in n_datapoint:
     x = np.linspace(0.0, np.pi/2, i)
-    for n in range(len(x)):
-     if x[n]%2 == 0 and n > 0 and n < len(x):
-         even.append(x[n])
-     elif n > 0 and n < len(x):
-         odd.append(x[n])
+    even = x[1::2]
+    odd = np.delete(x, even)
     y1 = np.cos(even)
     y_even=y1.sum()
     y2 = np.cos(odd)
@@ -45,7 +40,7 @@ for i in n_datapoint:
     
     
 print(err_simple)
-print(err)
+print(err) 
 
 y_simple=1+np.exp(err_simple)
 y_simpson=1+np.exp(err)

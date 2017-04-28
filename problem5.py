@@ -12,8 +12,8 @@ n_datapoint = [10, 30, 100, 300, 1000]
 
 for i in n_datapoint:
     x = np.linspace(0.0, np.pi/2, i)
-    even = x[1::2]
-    odd = np.delete(x, even)
+    odd = x[1::2]
+    even = np.delete(x, even)
     y1 = np.cos(even)
     y_even=y1.sum()
     y2 = np.cos(odd)

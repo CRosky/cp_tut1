@@ -25,8 +25,8 @@ for i in n_datapoint:
 err = []
 for i in n_datapoint:
     x = np.linspace(0.0, np.pi/2, i)
-    even = x[1:-2:2]
-    odd = np.delete(x[1:-2], even)
+    odd = x[1:-2:2]
+    even = np.delete(x[1:-2], odd)
     y1 = np.cos(even)
     y_even=y1.sum()
     y2 = np.cos(odd)

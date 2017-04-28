@@ -14,7 +14,7 @@ err_simple=[]
 n_datapoint = [10, 30, 100, 300, 1000]
 err = []
 for i in n_datapoint:
-    x = np.linspace(0.0, np.pi/2, i)
+    x = np.linspace(0.0, np.pi/2, i, endpoint=True)
     y = np.cos(x)
     total = y.sum()*(x[-1]-x[0])/i
     error = 1-total
@@ -24,7 +24,7 @@ for i in n_datapoint:
 
 err = []
 for i in n_datapoint:
-    x = np.linspace(0.0, np.pi/2, i)
+    x = np.linspace(0.0, np.pi/2, i, endpoint=True)
     even = x[1:-2:2]
     odd = np.delete(x[1:-2], even)
     y1 = np.cos(even)
